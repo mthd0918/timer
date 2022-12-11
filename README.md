@@ -1,5 +1,8 @@
 # Readme
 
+目的
+時間を測る
+
 使用方法
 git clone git@github.com:mthd0918/timer.git
 docker-compose exec app bash
