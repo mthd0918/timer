@@ -1,7 +1,24 @@
-<p>テスト</p>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("p").text("成功！！");
-  });
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IbsDiary</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <script>
+    function showtime(){
+      var today = new Date();
+      $weekday = ['日','月','火','水','木','金','土'];
+      month = today.getMonth() + 1 ;
+      $('#datetime').html(month + "月"+ today.getDate() + "日（" + $weekday[today.getDay()] +"） " +today.getHours() + ":" + ('0'+today.getMinutes()).slice(-2) + ":" + ('0' +today.getSeconds()).slice(-2));
+    }
+    setInterval(showtime,1000);
+  </script>
+<div id="datetime"></div>
+  </body>
+</html>
