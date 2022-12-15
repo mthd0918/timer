@@ -7,6 +7,7 @@
 以下のコマンドを実行
 ```
 git clone git@github.com:mthd0918/timer.git
+docker-compose up -d
 docker-compose exec app bash
 rails db:create && rails db:migrate
 ```
